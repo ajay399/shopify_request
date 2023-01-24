@@ -1,0 +1,25 @@
+function a2c(a2cArr) {
+              console.log("func called");
+            $.ajax({
+                type: 'POST',
+                url: '/cart/add.js',
+                data: {
+                    items: a2cArr
+                },
+                    dataType: 'json',
+                    success: function (data) {
+                    window.location.href = '/cart';
+                }
+            });
+        }
+
+
+//customCartArr is variantId array
+        for(itemId of customCartArr)
+      {
+          a2cArr.push({
+          quantity: 1,
+          id: itemId
+        });
+      }
+    a2c(a2cArr);

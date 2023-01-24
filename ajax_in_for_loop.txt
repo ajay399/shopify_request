@@ -1,0 +1,23 @@
+var configRequest=``,configPromises, = [];
+
+
+for(i=0;i<=100;i++)
+{
+
+configRequest = $.ajax({
+                type: 'GET',
+                url: `/abcd`,
+                    dataType: 'json',
+                    success: function (data) {
+
+                    }
+
+
+                    });
+
+configPromises.push(configRequest);  //this push ajax req there
+
+                    }
+$.when.apply(null, bundle_promises).done(function () {
+//all ajax finish this will call
+});

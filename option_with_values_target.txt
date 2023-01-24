@@ -1,0 +1,8 @@
+
+(1) very top of product file{%- capture variantInfo -%}{% for variant in product.variants %}--{{ variant.title }}{{ variant.available }}{% endfor %}{%- endcapture -%}
+
+
+(2) option.values loop 1stline : {%  assign currentVariantStage =  value | append: "false" | prepend: "--" %}
+
+
+(3) condition in anywhere in loop : {% if variantInfo contains currentVariantStage %} soldOut {% endif %}

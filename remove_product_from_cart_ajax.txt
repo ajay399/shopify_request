@@ -1,0 +1,12 @@
+ $.ajax({
+                type: 'POST',
+                url: '/cart/update.js',
+                data: {
+                    updates: {38070237528261: 0}
+                    
+                },
+                    dataType: 'json',
+                    success: function (data) {
+                    if(window.location.href.contains('/cart')){ window.location.href = '/cart';}
+                }
+            });
