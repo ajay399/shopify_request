@@ -1,0 +1,20 @@
+window.fetch = new Proxy(window.fetch, {
+  
+  apply(fetch, that, args) {
+    
+    const result = fetch.apply(that, args);
+
+    
+    result.then((response) => {
+      if(response.url.includes("/cart"))
+      {
+        alert("yes now we are talking");
+      }
+      
+      
+    });
+
+    // Return the resulting Promise
+    return result;
+  }
+});
