@@ -1,18 +1,23 @@
-//filling data
+//Preparing array which contains data for respective Product/Variant ID
+
+
        let tempProdObj = [
-    { key: prodData+`_title`, value: rvpTuncatedTitle },
-    { key: prodData+`_price`, value: rvpProPrice }
+    { key: prodId+`_title`, value: rvpTuncatedTitle },
+    { key: prodId+`_price`, value: rvpProPrice }
 ];
 
 window.ProdObj = {};
 
     for (let i = 0; i < tempProdObj.length; i++) {
     let ProdItem = tempProdObj[i];
-    ProdObj[ProdItem.key] = ProdItem.value;
+    ProdObj[ProdItem.key] = prodId.value;
 }
 
 
 
-//mapping Data
-        var prodTitleElement = `${prodBoxElement} .abcd`;
-        $(prodTitleElement).text(ProdObj[`${prodData}_title`]);
+//Selecting selector which have that Product/Variant ID
+
+        var parentElement = `.container.${prodId}`;
+
+        var prodTitleElement = `${parentElement} .title`;
+        $(prodTitleElement).text(ProdObj[`${prodId}_title`]);
