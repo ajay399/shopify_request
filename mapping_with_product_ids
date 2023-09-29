@@ -1,0 +1,18 @@
+//filling data
+       let tempProdObj = [
+    { key: prodData+`_title`, value: rvpTuncatedTitle },
+    { key: prodData+`_price`, value: rvpProPrice }
+];
+
+window.ProdObj = {};
+
+    for (let i = 0; i < tempProdObj.length; i++) {
+    let ProdItem = tempProdObj[i];
+    ProdObj[ProdItem.key] = ProdItem.value;
+}
+
+
+
+        mapping Data
+        var prodTitleElement = `${prodBoxElement} .abcd`;
+        $(prodTitleElement).text(ProdObj[`${prodData}_title`]);
