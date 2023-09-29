@@ -13,6 +13,6 @@ window.ProdObj = {};
 
 
 
-        mapping Data
+//mapping Data
         var prodTitleElement = `${prodBoxElement} .abcd`;
         $(prodTitleElement).text(ProdObj[`${prodData}_title`]);
